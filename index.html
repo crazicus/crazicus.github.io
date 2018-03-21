@@ -1,29 +1,146 @@
 <!DOCTYPE html>
 <head>
 	<title>Christopher Wyllie</title>
-	<style>
-		body {
-			background-color: #2D2D2D;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translateX(-50%) translateY(-50%);
-		}
-		
-		h1 {
-			color: steelblue;
-			font-size: 30px;
-			font-family: Menlo, Monaco, fixed-width;
-		}
-		
-		p {
-			color: white;
-			font-family: "Source Code Pro", Menlo, Monaco, fixed-width;
-		}
-	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="viewport" content="height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+					// Prevent default anchor click behavior
+					event.preventDefault();
+
+					// Store hash
+					var hash = this.hash;
+
+					// Using jQuery's animate() method to add smooth page scroll
+					// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function(){
+						// Add hash (#) to URL when done scrolling (default click behavior)
+						window.location.hash = hash;
+					});
+				} 
+			});
+		});
+
+		$(window).scroll(function() {
+			if ($(this).scrollTop()>0) {
+				$('.a').css({"opacity":"1","transition":"0.5s"});
+			} else {
+				$('.a').css({"opacity":"0","transition":"0.2s"});
+			}
+		});
+	</script>
 </head>
 <body>
-	<h1>Oops!</h1>
-	<p>This site is currently under construction! Questions? Email chris@christopherwyllie.com!</p>
-</body>
+	<div id="container">
+		<div class="screen home" id="home">
+			<div id="home-content">
+				<h1>Christopher Wyllie</h1>
+				<br>
+				<ul id="links">
+					<li><a class="link" href="#about">About</a></li>
+					<li><a class="link" href="#projects">Projects</a></li>
+					<li><a class="link" href="files/Resume.pdf" target="_blank">Resume</a></li>
+				</ul>
+				<br><br><br>
+				<div>
+					<a href="https://www.facebook.com/cwyllie98" class="media">
+						<img src="images/facebook.png" class="media" alt="">
+					</a>
+					<a href="https://linkedin.com/in/christopherwyllie" class="media">
+						<img src="images/linkedin.png" class="media" alt="">
+					</a>
+					<a href="https://github.com/crazicus" class="media">
+						<img src="images/github.png" class="media" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="screen about" id="about">
+			<div class="header">
+				<h2>About</h2>
+			</div>
+			<div class="content">
+				<p> Hi there! 
+					<br><br>
+					California born, Utah raised, and Georgia living, I've had a passion for computers since the 6th grade when I bought my first computer so I could play <i>Minecraft</i>. After finding out that it couldn't do what I wanted it to, I delved down the rabbit hole of custom built computers, finally building my first in my junior year of high school, which I still use today. That launched my love of all things digital, and I began learning Java with my best friend Bryce.
+					<br><br>
+					Fast forward a few years, and I'm now a sophomore at Emory University, studying Computer Science and German Studies and on track to earn a Bachelors of Science degree in May of 2020. I'm the Dev Initiative chair for HackEmory, Emory University's premiere coding club, and in my free time I write code and dance salsa!
+					<br><br>
+					I've also been learning German since my sophomore year of high school, and I'll be studying abroad in the beautiful city of Berlin in the fall, where I'll be pushing my German major nearly to completion, also placing me within reach of the TU-Berlin, a wealth of technical knowledge.
+					<br><br>
+					Reach out to me via any of my social media accounts above, or shoot me an email at chris@christopherwyllie.com!
+				</p>
+			</div>
+		</div>
+		<div class="screen projects" id="projects">
+			<div class="header">
+				<h2>Projects</h2>
+			</div>
+			<div id="proj-container">
+				<div class="proj">
+					<h3>Bitcoin Ticker</h3>
+					<hr>
+					<p class="projText">
+						Using libraries of Python used for web scraping, this simple script returns a constantly updating list of unconfirmed transactions on the Bitcoin cryptocurrency. Written in under 2 hours at HackEmory's Hacking on Blockchain event on February 24th, 2018.
+					<br>
+					<ul class="techs">
+						<h4>Technologies Used:</h4>
+						<li>- Python</li>
+						<li>- BeautifulSoup</li>
+					</ul>
+					</p>
+					<a href="https://github.com/crazicus/Bitcoin-Transaction-Tracker/tree/master" target="_blank" class="projLink">
+						<div class="projLinkBox"><p>Github</p></div>
+					</a>
+				</div>
+				<div class="proj">
+					<h3>This Website!</h3>
+					<hr>
+					<p class="projText">
+						This website, <a href="http://christopherwyllie.com" class="bodyLink">christopherwyllie.com</a> was created as a way to collectively showcase myself to the world, showing my resume, projects, and most importantly my skills in Web Development. Contact me at the form below or via any of my social media accounts.
+					<br>
+					<ul class="techs">
+						<h4>Technologies Used:</h4>
+						<li>- HTML/CSS</li>
+						<li>- JavaScript</li>
+					</ul>
+					</p>
+					<a href="https://github.com/crazicus/crazicus.github.io" target="_blank" class="projLink">
+						<div class="projLinkBox"><p>Github</p></div>
+					</a>                    
+				</div>
+				<div class="proj">
+					<h3>MemEmory</h3>
+					<hr>
+					<p class="projText">
+						<em>(In Progress)</em>
+						MemEmory is a way for students to connect through a feed of user-submitted memes and free food options on campus, additionally helping clubs garner more attention. Co-created with members of HackEmory, Emory University's premiere coding club.
+					<br>
+					<ul class="techs">
+						<h4>Technologies In Use:</h4>
+						<li>- React Native</li>
+						<li>- Firebase</li>
+					</ul>
+					</p>
+					<a href="" target="_blank" class="projLink not-active">
+						<div class="projLinkBox"><p>Github</p></div>
+					</a>                    
+				</div>
+			</div>
+		</div>
+
+		<a href="#home" class="a">
+			<div id="return">
+				<img src="images/chevron.png" id="chevron">
+			</div>
+		</a>
+	</body>
 </html>
