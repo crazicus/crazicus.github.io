@@ -1,146 +1,262 @@
 <!DOCTYPE html>
+<html>
 <head>
 	<title>Christopher Wyllie</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta name="viewport" content="height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="stylesheet" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-		// Add smooth scrolling to all links
-			$("a").on('click', function(event) {
-				// Make sure this.hash has a value before overriding default behavior
-				if (this.hash !== "") {
-					// Prevent default anchor click behavior
-					event.preventDefault();
-
-					// Store hash
-					var hash = this.hash;
-
-					// Using jQuery's animate() method to add smooth page scroll
-					// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-					$('html, body').animate({
-						scrollTop: $(hash).offset().top
-					}, 800, function(){
-						// Add hash (#) to URL when done scrolling (default click behavior)
-						window.location.hash = hash;
-					});
-				} 
-			});
-		});
-
-		$(window).scroll(function() {
-			if ($(this).scrollTop()>0) {
-				$('.a').css({"opacity":"1","transition":"0.5s"});
-			} else {
-				$('.a').css({"opacity":"0","transition":"0.2s"});
-			}
-		});
-	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="js/remake_scripts.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/remake_style.css">
+	<link rel="icon" href="images/logo_black.png">
+	<!-- color template: http://www.color-hex.com/color-palette/26786 -->
+	<!-- icons: https://www.w3schools.com/icons/fontawesome_icons_webapp.asp -->
 </head>
-<body>
-	<div id="container">
-		<div class="screen home" id="home">
-			<div id="home-content">
-				<h1>Christopher Wyllie</h1>
-				<br>
-				<ul id="links">
-					<li><a class="link" href="#about">About</a></li>
-					<li><a class="link" href="#projects">Projects</a></li>
-					<li><a class="link" href="files/Resume.pdf" target="_blank">Resume</a></li>
-				</ul>
-				<br><br><br>
-				<div>
-					<a href="https://www.facebook.com/cwyllie98" class="media">
-						<img src="images/facebook.png" class="media" alt="">
-					</a>
-					<a href="https://linkedin.com/in/christopherwyllie" class="media">
-						<img src="images/linkedin.png" class="media" alt="">
-					</a>
-					<a href="https://github.com/crazicus" class="media">
-						<img src="images/github.png" class="media" alt="">
-					</a>
-				</div>
-			</div>
+<body data-spy="scroll" data-target="#links" data-offset="56">
+	<div class="container-fixed col-md-4 justify-content-center" id="sidebar">
+		<div class="text-center" id="info">
+			<img id="headshot" class="img-thumbnail rounded-circle" src="images/headshot.jpg" alt="headshot">
+			<h1 id="name">Christopher Wyllie</h1>
 		</div>
-		<div class="screen about" id="about">
-			<div class="header">
-				<h2>About</h2>
+		<div class="row" id="socials">
+			<div class="col-md-4">
+				<a href="https://www.facebook.com/cwyllie98" class="media">
+					<img src="images/facebook.png" alt="">
+				</a>
 			</div>
-			<div class="content">
-				<p> Hi there! 
-					<br><br>
-					California born, Utah raised, and Georgia living, I've had a passion for computers since the 6th grade when I bought my first computer so I could play <i>Minecraft</i>. After finding out that it couldn't do what I wanted it to, I delved down the rabbit hole of custom built computers, finally building my first in my junior year of high school, which I still use today. That launched my love of all things digital, and I began learning Java with my best friend Bryce.
-					<br><br>
-					Fast forward a few years, and I'm now a sophomore at Emory University, studying Computer Science and German Studies and on track to earn a Bachelors of Science degree in May of 2020. I'm the Dev Initiative chair for HackEmory, Emory University's premiere coding club, and in my free time I write code and dance salsa!
-					<br><br>
-					I've also been learning German since my sophomore year of high school, and I'll be studying abroad in the beautiful city of Berlin in the fall, where I'll be pushing my German major nearly to completion, also placing me within reach of the TU-Berlin, a wealth of technical knowledge.
-					<br><br>
-					Reach out to me via any of my social media accounts above, or shoot me an email at chris@christopherwyllie.com!
-				</p>
+			<div class="col-md-4">
+				<a href="https://linkedin.com/in/christopherwyllie" class="media">
+					<img src="images/linkedin.png" alt="">
+				</a>
 			</div>
+			<div class="col-md-4">
+				<a href="https://github.com/crazicus" class="media">
+					<img src="images/github.png" alt="">
+				</a>
+			</div>	
 		</div>
-		<div class="screen projects" id="projects">
-			<div class="header">
-				<h2>Projects</h2>
+	</div>
+	<nav class="navbar nav-fill col-md-8" id="links">
+		<a class="nav-link active" href="#home">Home</a>
+		<a class="nav-link" href="#about">About</a>
+		<a class="nav-link" href="#portfolio">Portfolio</a>
+		<a class="nav-link" href="#contact">Contact</a>
+	</nav>
+	<div class="container-fixed col-md-8" id="body">
+		<div id="screens">
+			<div class="screen" id="home">
+				<div id="home_txt">
+					<h2>Web Developer.<br>Software Tester.<br>Musician.</h2>
+				</div>
+				<div id="logo_container">
+					<img src="images/logo_white.png" alt="logo" id="logo">
+				</div>
 			</div>
-			<div id="proj-container">
-				<div class="proj">
-					<h3>Bitcoin Ticker</h3>
-					<hr>
-					<p class="projText">
-						Using libraries of Python used for web scraping, this simple script returns a constantly updating list of unconfirmed transactions on the Bitcoin cryptocurrency. Written in under 2 hours at HackEmory's Hacking on Blockchain event on February 24th, 2018.
-					<br>
-					<ul class="techs">
-						<h4>Technologies Used:</h4>
-						<li>- Python</li>
-						<li>- BeautifulSoup</li>
-					</ul>
-					</p>
-					<a href="https://github.com/crazicus/Bitcoin-Transaction-Tracker/tree/master" target="_blank" class="projLink">
-						<div class="projLinkBox"><p>Github</p></div>
+			<div class="screen" id="about">
+				<h3>About</h3>
+				<div id="blurb_1" class="blurb">
+					Born in California, raised in Utah, and schooling in Georgia at Emory University (class of 2020!), my life is a climate-diverse coast-to-coast game of ping pong, bouncing between populated cities to suburban deserts to rural farm country. In the fall, I'll be studying in Berlin, expanding my multi-state travels to multi-continent (not to mention the international networking I'll get done.)
+				</div>
+				<div id="blurb_2" class="blurb">
+					As varied as my geographical background comes my hobbies and interests. I've played the trombone for 8 years, produced for a professional band, and most recently I've picked up salsa dancing! I love to learn new things and can often be found listening to podcasts or learning new tricks about my favorite video games!
+				</div>
+				<div id="blurb_3" class="blurb">
+					In addition to my collection of interests and tales of road trips, I write code. I like to tinker around to figure out what I like doing best, whether it be building a miniature game show during my free time at the hardware booth of a hackathon or conjuring up a flying cloud of Bitcoin transactions. Websites and related services can be inquired below!
+				</div>
+			</div>
+			<div class="screen" id="portfolio">
+				<h3>Portfolio</h3>
+				<div class="card-columns">
+					<a class="card_link" target="_blank" href="https://btc.christopherwyllie.com">
+						<div class="card bg-light" id="card_1">
+							<div class="card-header">
+								<h4 class="card-title">Bitcoin Transaction Ticker</h4>
+								<h6 class="card-subtitle text-muted"><i>Self</i></h6>
+							</div>
+							<img src="images/btc-tracker.png" class="card-img-top" alt="project">
+							<div class="card-body">
+								<p class="card-text">Utilizing the Blockchain.info WebSocket, this ticker is a real-time data visualization of unconfirmed Bitcoin transactions. Text size is determined by each transactions value passed through a logarithmic function (with pretty colors added just for fun!) Switch between BTC and USD and enjoy the show.</p>
+								<p class="card-text"><small class="text-muted">HTML, CSS, JavaScript</small></p>
+							</div>
+						</div>
+					</a>
+					<a class="card_link" target="_blank" href="https://db.christopherwyllie.com">
+						<div class="card bg-light" id="card_1">
+							<div class="card-header">
+								<h4 class="card-title">Emory Course Evaluation System</h4>
+								<h6 class="card-subtitle text-muted"><i>CS377 Final Project</i></h6>
+							</div>
+							<img src="images/db.png" class="card-img-top" alt="project">
+							<div class="card-body">
+								<p class="card-text">An online solution to Emory University's current paper-only end-of-semester Course Evaluation system. If fully implemented, over 100,000 sheets of paper waste could be avoided every year. Built on the LAMP stack.</p>
+								<p class="card-text"><small class="text-muted">HTML, CSS, LAMP</small></p>
+							</div>
+						</div>
+					</a>
+					<a class="card_link" target="_blank" href="https://github.com/crazicus/ScaleEncyclopedia">
+						<div class="card bg-light" id="card_1">
+							<div class="card-header">
+								<h4 class="card-title">Scale Encyclopedia</h4>
+								<h6 class="card-subtitle text-muted"><i>Self&mdash;In Progress</i></h6>
+							</div>
+							<img src="images/scale.JPG" class="card-img-top" alt="project">
+							<div class="card-body">
+								<p class="card-text">A React Native-built app for musicians everywhere, of all skill levels. With an intuitive interface, users can quickly find out all the information they need on any given Major, minor, or Pentatonic scales.</p>
+								<p class="card-text"><small class="text-muted">React Native</small></p>
+							</div>
+						</div>
+					</a>
+					<a class="card_link" target="_blank" href="https://github.com/crazicus/GuessMe">
+						<div class="card bg-light" id="card_1">
+							<div class="card-header">
+								<h4 class="card-title">GuessMe</h4>
+								<h6 class="card-subtitle text-muted"><i>HackEmory V</i></h6>
+							</div>
+							<img src="images/raspi.jpg" class="card-img-top" alt="project">
+							<div class="card-body">
+								<p class="card-text">Built in the wee hours of the morning, behind the desk of the MLH hardware booth at HackEmory V, GuessMe was created. A simple game of probability, its creation served the purpose of learning how the Arduino Base shield operates, as well as a fair amount of tinkering with the buzzer module (ever heard the Star Spangled Banner played by a robot?)</p>
+								<p class="card-text"><small class="text-muted">C++, Arduino Uno</small></p>
+							</div>
+						</div>
+					</a>
+					<a class="card_link" target="_blank" href="https://github.com/crazicus/python-march-madness">
+						<div class="card bg-light" id="card_1">
+							<div class="card-header">
+								<h4 class="card-title">March Madness Bracket Generator</h4>
+								<h6 class="card-subtitle text-muted"><i>HackEmory (Club)</i></h6>
+							</div>
+							<img src="images/bracket.jpg" class="card-img-top" alt="project">
+							<div class="card-body">
+								<p class="card-text">This project works by scraping historical data from March Madness games in the past, and calculates the observed probability that a given team will win against another, using their seed ranking. Using these calculations, we generate random bracket outcomes, allowing inexperienced players to make reasonable brackets.</p>
+								<p class="card-text"><small class="text-muted">Python, BeautifulSoup</small></p>
+							</div>
+						</div>
+					</a>
+					<a class="card_link" target="_blank" href="https://github.com/crazicus/Snake-with-Yo-Face">
+						<div class="card bg-light" id="card_1">
+							<div class="card-header">
+								<h4 class="card-title">Hands-Free Snake</h4>
+								<h6 class="card-subtitle text-muted"><i>HackGT 4</i></h6>
+							</div>
+							<img src="images/face.png" class="card-img-top" alt="project">
+							<div class="card-body">
+								<p class="card-text">"Use your head!" takes on a whole new meaning with this hands-free solution to playing snake. Using EEG and accelerometer data from the Muse Headband, this Java-esque game allows you to immerse yourself in the snake experience, jerking your head left or right to change direction, or raising your eyebrows to reset the game. (Gameplay: 4/10, Comedic Value: 9/10, Neck Pain: 10/10)</p>
+								<p class="card-text"><small class="text-muted">Processing, Muse</small></p>
+							</div>
+						</div>
+					</a>
+					<a class="card_link" target="_blank" href="https://github.com/crazicus/FakeSwears">
+						<div class="card bg-light" id="card_1">
+							<div class="card-header">
+								<h4 class="card-title">Fake Swears</h4>
+								<h6 class="card-subtitle text-muted"><i>Self&mdash;In Progress</i></h6>
+							</div>
+							<img src="images/parad.png" class="card-img-top" alt="project">
+							<div class="card-body">
+								<p class="card-text">A python based bot with the intention of cleaning up the internet, one foul-mouthed Redditor or Slacker at a time! When invoked, the bot strips away all profanity and replaces it with a family-friendly FakeSwearBot Approved&trade; alternative! (Other names include: MadLadLib, WordBleach, Motherfalafeler 9000)</p>
+								<p class="card-text"><small class="text-muted">Python, Heroku</small></p>
+							</div>
+						</div>
 					</a>
 				</div>
-				<div class="proj">
-					<h3>This Website!</h3>
-					<hr>
-					<p class="projText">
-						This website, <a href="http://christopherwyllie.com" class="bodyLink">christopherwyllie.com</a> was created as a way to collectively showcase myself to the world, showing my resume, projects, and most importantly my skills in Web Development. Contact me at the form below or via any of my social media accounts.
-					<br>
-					<ul class="techs">
-						<h4>Technologies Used:</h4>
-						<li>- HTML/CSS</li>
-						<li>- JavaScript</li>
-					</ul>
-					</p>
-					<a href="https://github.com/crazicus/crazicus.github.io" target="_blank" class="projLink">
-						<div class="projLinkBox"><p>Github</p></div>
-					</a>                    
-				</div>
-				<div class="proj">
-					<h3>MemEmory</h3>
-					<hr>
-					<p class="projText">
-						<em>(In Progress)</em>
-						MemEmory is a way for students to connect through a feed of user-submitted memes and free food options on campus, additionally helping clubs garner more attention. Co-created with members of HackEmory, Emory University's premiere coding club.
-					<br>
-					<ul class="techs">
-						<h4>Technologies In Use:</h4>
-						<li>- React Native</li>
-						<li>- Firebase</li>
-					</ul>
-					</p>
-					<a href="" target="_blank" class="projLink not-active">
-						<div class="projLinkBox"><p>Github</p></div>
-					</a>                    
-				</div>
 			</div>
-		</div>
+			<div class="screen" id="contact">
+				<h3>Contact</h3>
+				<a class="btn btn-primary btn-block" id="res" target="_blank" href="https://christopherwyllie.com/files/resume_sc.pdf">View my Resume <i class="fa fa-external-link"></i></a>
+				<br /><br /><br />
 
-		<a href="#home" class="a">
-			<div id="return">
-				<img src="images/chevron.png" id="chevron">
+
+				<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#email">
+				  	<i class="fa fa-envelope"></i>
+				</button>
+				<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#phone">
+				  	<i class="fa fa-phone"></i>
+				</button>
+				<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#location">
+				  	<i class="fa fa-map-marker"></i>
+				</button>
+				<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#handle">
+				  	<i class="fa fa-twitter"></i>
+				</button>
+
+				<!-- Modals -->
+				<div id="modals">
+					<div class="modal fade" id="email" tabindex="-1" role="dialog" aria-labelledby="email" aria-hidden="true">
+					  	<div class="modal-dialog modal-dialog-centered" role="document">
+					    	<div class="modal-content">
+					      		<div class="modal-header">
+					        		<h5 class="modal-title">Send me an email!</h5>
+					        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          			<span aria-hidden="true">&times;</span>
+					        		</button>
+					      		</div>
+						      	<div class="modal-body">
+						        	chris@christopherwyllie.com
+						      	</div>
+					      		<div class="modal-footer">
+							        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							    </div>
+					   		</div>
+					  	</div>
+					</div>
+					<div class="modal fade" id="phone" tabindex="-1" role="dialog" aria-labelledby="phone" aria-hidden="true">
+					  	<div class="modal-dialog modal-dialog-centered" role="document">
+					    	<div class="modal-content">
+					      		<div class="modal-header">
+					        		<h5 class="modal-title">Call or text me!</h5>
+					        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          			<span aria-hidden="true">&times;</span>
+					        		</button>
+					      		</div>
+						      	<div class="modal-body">
+						        	+1 (801) 636-3894
+						      	</div>
+					      		<div class="modal-footer">
+							        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							    </div>
+					   		</div>
+					  	</div>
+					</div>
+					<div class="modal fade" id="location" tabindex="-1" role="dialog" aria-labelledby="location" aria-hidden="true">
+					  	<div class="modal-dialog modal-dialog-centered" role="document">
+					    	<div class="modal-content">
+					      		<div class="modal-header">
+					        		<h5 class="modal-title">Where am I?</h5>
+					        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          			<span aria-hidden="true">&times;</span>
+					        		</button>
+					      		</div>
+						      	<div class="modal-body">
+						        	Riverside, CA 92505
+						      	</div>
+					      		<div class="modal-footer">
+							        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							    </div>
+					   		</div>
+					  	</div>
+					</div>
+					<div class="modal fade" id="handle" tabindex="-1" role="dialog" aria-labelledby="handle" aria-hidden="true">
+					  	<div class="modal-dialog modal-dialog-centered" role="document">
+					    	<div class="modal-content">
+					      		<div class="modal-header">
+					        		<h5 class="modal-title">Tweet at me!</h5>
+					        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          			<span aria-hidden="true">&times;</span>
+					        		</button>
+					      		</div>
+						      	<div class="modal-body">
+						        	<a href="https://twitter.com/crazicus" target="_blank">@crazicus</a>
+						      	</div>
+					      		<div class="modal-footer">
+							        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							    </div>
+					   		</div>
+					  	</div>
+					</div>
+				</div>
+
 			</div>
-		</a>
-	</body>
+		</div>
+	</div>
+</body>
 </html>
