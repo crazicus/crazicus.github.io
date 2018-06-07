@@ -1,254 +1,172 @@
 html, body {
-	margin: 0;
+	height: 100%;
+	padding-left: 0px;
+	padding-right: 0px;	
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
-h1 {
-	font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
-	font-style: normal;
-	font-weight: 500;
-	color: white;
+body {
+	position: relative;
 }
 
-h2 {
-	font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
-	font-weight: normal;
-	margin-left: 13px;
-	line-height: 8vh;
-	margin-top: 1vh;
-	margin-bottom: 1vh;
+#sidebar {
+	background-color: #262729;
+	height: 100%;
+	min-height: 412px;
+	position: fixed;
+	color: #f5f5f5;
+	padding: 0px 0px 0px 0px;
+	overflow-y: scroll;
 }
 
-h3 {
-	font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
-	font-size: 20px;
-	padding-left: 13px;
-}
-
-h4 {
-	font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
-	margin-bottom: 6px;
-}
-
-.a {
-	opacity: 0;
-}
-
-.about {
-	background-color: gray;
-	background-image: url("../images/beachLandscape.JPG");
-	background-size: cover;
+#body {
+	background-color: #32323c;
+	position: relative;
+	padding-right: 0;
+	color: #f5f5f5;
+	float: right;
 	height: auto;
+	width: 100%;
 }
 
-.bodyLink {
-	font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
-	font-style: normal;
-	font-weight: 500;
-	color: black;
-	font-size: inherit;	
+#headshot {
+	width: 200px;
+	height: 200px;
+	margin: 40px auto 20px auto;
 }
 
-.content {
-	width: 60%;
-	height: auto;
-	margin: 5vh auto;
-	background-color: white;
-	border: solid lightgray 1px;
-	border-radius: 11px;
+#links {
+	background-color: #171719;
+	color: #f5f5f5;
+	margin-left: 0;
+	margin-right: 0;
+	text-decoration: none;
+	position: fixed;
+	right: 0;
+	z-index: 1;
 }
 
-.content p {
-	padding: 0 13px;
-	font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
+#logo {
+	width: 200px;
+	height: 200px;
 }
 
-.header {
-	width: 60%;
-	height: 10vh;
-	margin: auto;
-	margin-top: 5vh;
-	background-color: white;
-	border: solid lightgray 1px;
-	border-radius: 11px;
+#logo_container {
+	float: right;
+	width: 240px;
+	height: 240px;
+	background-color: #222222;
+	border-radius: 40px;
+	padding: 20px;
 }
 
-.home {
-	background-color: black;
-	margin: auto;
-
-	align-items: center;
+#socials {
 	display: flex;
-	justify-content: center;
-	flex-direction: column;
+	flex-direction: row;
+	position: absolute;
+	width: 100%;
+	bottom: 40px;
+	margin: 0;
+	padding-right: 0px;
+	justify-content: space-between;
+	z-index: 1;
 }
 
-.link {
-	font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
-	font-style: normal;
-	font-weight: 500;
-	color: white;
-	font-size: 12pt;
+#socials > ul {
+	list-style-type: none;
 }
 
-.link:hover {
-	font-weight: bold;
+/* SCREENS */
+#screens {
+	height: 100%;
+}
+
+.screen {
+	z-index: 1;
+	padding: 76px 56px 56px 56px;
+	width: 100%;
+	min-height: 100vh;
+	height: auto;
+	overflow: auto;
+}
+
+#home {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	/*background-color: rgba(34, 34, 34, 0.6);*/
+}
+
+#home_txt {
+	text-align: right;
+	margin-right: 56px;
+}
+
+#about {
+	/*background-color: green;*/
+}
+
+.blurb {
+	background-color: #222222;
+	margin-top: 20px;
+	padding: 15px;
+	width: 80%;
+}
+
+#blurb_1, #blurb_3 {
+	text-align: justify;
+	border-radius: 20px 20px 20px 0px;
+	float: left;
+}
+
+#blurb_2 {
+	text-align: justify;
+	border-radius: 20px 20px 0px 20px;
+	float: right;
+}
+
+#portfolio {
+	/*background-color: yellow;*/
+}
+
+.card_link {
+	color: rgb(33, 37, 41) !important;
+}
+
+.nestLink {
+	color: #007bff;
+ 	text-decoration: none;
+  	background-color: transparent;
+  	-webkit-text-decoration-skip: objects;
+}
+
+#contact {
+	/*background-color: magenta;*/
+}
+
+#modals {
+	color: rgb(33, 37, 41);
 }
 
 .media {
 	width: 64px;
-	height: 64px;
+	height: auto;
 	color: black;
 	text-decoration: none;
-	margin: 8px;
+	margin: auto;
 }
 
-.not-active {
-  pointer-events: none;
-  text-decoration:none;
-  color: white;
-  cursor: not-allowed;
+.nav-link {
+	color: #aaaaaa;
 }
 
-.proj {
-	position: relative;
-	width: 240px;
-	height: 462px;
-	margin: 0 12px;
-	display: inline-block;
-	background-color: white;
-	border: solid lightgray 1px;
-	border-radius: 11px;	
+.nav-link:active,
+.nav-link:hover,
+.nav-link:focus {
+	color: #f5f5f5;
 }
 
-.projects {
-	background-color: black;
-	height: auto;
-}
-
-.projLinkBox {
-	position: absolute;
-	bottom: 0;
-	height: 40px;
-	width: 100%;
-	border-top: solid lightgray 1px;
-	border-radius: 0px 0px 11px 11px; 
-	font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
-	text-align: center;
-	font-size: 16pt;
-	color: black;
-}
-
-.projLinkBox:hover {
-	background-color: lightgray;
-}
-
-.projLinkBox p {
-	margin-top: 10px;
-}
-
-.projText {
-	padding: 0 13px;
-	font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
-}
-
-.screen {
-	width: 100%;
-	height: 100vh;
-	float: left;
-	margin: 0px;
-}
-
-.techs {
-	list-style-type: none;
-	position: absolute;
-	bottom: 48px;
-	font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
-	margin: 0;
-	padding: 0 13px;
-}
-
-#container {
-	height: 100%;
-	margin: 0;
-}
-
-#home-content {
-	text-align: center;
-	flex-direction: column;
-}
-
-#links {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-}
-
-#links li {
-	padding-top: 10px;
-}
-
-#proj-container {
-	margin: 5vh auto;
-	width: 798px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-#return {
-	position: fixed;
-	background-image: url("../images/chevron.png");
-	background-position: center;
-	background-size: 40px;
-	bottom: 20px;
-	right: 20px;
-	width: 40px;
-	height: 40px;
-	border: solid white 1px;
-	border-radius: 20px;
-}
-
-@media (max-width: 767px) {
-	h2 {
-		margin-left: 0;
-	}
-
-	h3 {
-		text-align: center;
-		padding: 0;
-	}
-
-	.about {
-		background-image: url("../images/beachPortrait.JPG");
-	}
-
-	.content {
-		width: 90%;
-	}
-
-	.header {
-		width: 90%;
-		text-align: center;
-	}
-
-	.link {
-		font-size: 18pt;
-	}
-
-	.proj {
-		width: 90%;
-		margin: 0px auto 20px;
-	}
-
-	#proj-container {
-		width: 100%;
-		margin: 0;
-		margin-top: 5vh;
-		height: auto;
-	}
-	
-	#return {
-		bottom: 10px;
-		right: 10px;
-	}
+.active {
+	color: #f5f5f5;
 }
